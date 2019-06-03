@@ -1,4 +1,4 @@
-module mux (input logic [3:0] s, output logic q);
+module mux9 (input logic [3:0] s, output logic q);
 
 always_comb
    case(s)
@@ -12,17 +12,17 @@ always_comb
 	7: q = 0;
 	8: q = 1;
 	//DONE
-	9: q = z;
-	10: q = z;
-	11: q = z;
-	12: q = z;
-	13: q = z;
-	14: q = z;
-	15: q = z;
+	9: q = 1'bz;
+	10: q = 1'bz;
+	11: q = 1'bz;
+	12: q = 1'bz;
+	13: q = 1'bz;
+	14: q = 1'bz;
+	15: q = 1'bz;
 
 
 	
 
-	default: q = z; 
+	default: q = 1'bz; 
 	endcase 
 endmodule

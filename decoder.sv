@@ -1,6 +1,8 @@
-module decoder (input s,
-					output q);
+module decoder (input logic s, en
+					output logic q);
 	
-	if(s == 1) q = 1;
-	
-endmodule
+//	always@(posedge en)
+//	if(s == 1) 
+//	q = 1;
+//	
+endmodule 
