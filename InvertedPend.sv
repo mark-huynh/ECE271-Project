@@ -39,8 +39,10 @@ module InvertedPend(input logic clk, output logic sda, scl, led);
 	.en(selectSig),
 	.y(ledLine));
 	
+	
 	decoder decode(
 	.s(ledLine),
 	.q(led));
+	
 	
 endmodule 

@@ -12,13 +12,7 @@ always_comb
 	7: q = 0;
 	8: q = 1;
 	//DONE
-	9: q = 1'bz;
-	10: q = 1'bz;
-	11: q = 1'bz;
-	12: q = 1'bz;
-	13: q = 1'bz;
-	14: q = 1'bz;
-	15: q = 1'bz;
+	
 
 
 	
