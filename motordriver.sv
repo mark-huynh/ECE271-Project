@@ -1,11 +1,11 @@
 module motordriver(input logic clkin, output logic [3:0] motorpin);
 
 	logic resetnode;
-	logic tomuxnode;
+	logic [3:0] tomuxnode;
 	
 	counter counting(
 	.clk(clkin),
-	.reset_n(resernode),
+	.reset_n(resetnode),
 	.q(tomuxnode));
 	
 	motormux motor(
