@@ -6,14 +6,14 @@ module motordriver(input logic clkin,input logic orclk, output logic [3:0] motor
 	
 	counter counting(
 	.clk(clkin),
-	.reset_n(resetnode),
+	.reset_n(resetsync),
 	.q(tomuxnode));
 	
 	motormux motor(
 	.select(tomuxnode),
 	.motor(motorpin));
 	
-	comparator4 comp(
+	comparator comp(
 	.q(tomuxnode),
 	.gte(resetnode));
 	

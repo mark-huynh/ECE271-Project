@@ -17,11 +17,11 @@ module motormux(input logic [3:0] select, output logic [3:0] motor);
 always_comb
    case(select)
 		// 	A_BCD
-		0: motor = 4'b0_101;
-		1: motor = 4'b1_001;
-		2: motor = 4'b1_010;
-		3: motor = 4'b0_110;
+		0: motor = 4'b0_101;//5
+		1: motor = 4'b1_001;//9
+		2: motor = 4'b1_010;//10
+		3: motor = 4'b0_110;//6
 	
-		default: motor = 4'b0_000;
+		default: motor = 4'b0_000;//0
 	endcase 
 endmodule 
