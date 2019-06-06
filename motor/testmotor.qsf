@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY motortest
+set_global_assignment -name TOP_LEVEL_ENTITY testmotor
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:48:32  MAY 25, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
@@ -65,15 +65,15 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to motor[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to motor[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to motor[3]
 set_global_assignment -name SYSTEMVERILOG_FILE tribuffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testmotor.sv
 set_global_assignment -name SYSTEMVERILOG_FILE sclmux.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux9.sv
+set_global_assignment -name SYSTEMVERILOG_FILE InvertedPend.sv
 set_global_assignment -name SYSTEMVERILOG_FILE decoder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE motor/wavedecoder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE motor/testmotor.sv
-set_global_assignment -name BDF_FILE motor/motortest.bdf
-set_global_assignment -name SYSTEMVERILOG_FILE motor/motormux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE motor/motordriver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE basic/wavedecoder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE basic/sync.sv
+set_global_assignment -name SYSTEMVERILOG_FILE basic/motormux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE basic/motordriver.sv
 set_global_assignment -name SYSTEMVERILOG_FILE basic/Counter.sv
 set_global_assignment -name SYSTEMVERILOG_FILE basic/comparator.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

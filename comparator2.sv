@@ -1,6 +1,0 @@
-module comparator2 #(parameter N=4, M=2)
-						 (input logic [(N - 1):0] q,
-						  output logic gte);
-	
-	assign gte = (q >= M);
-endmodule

@@ -1,4 +1,4 @@
-module motormux(input logic [3:0] select, output logic [3:0] motor);
+module motormux(input logic [3:0] select, output logic [1:0] motor);
 
 /*
 	One Step for a bipolar stepper
@@ -17,11 +17,10 @@ module motormux(input logic [3:0] select, output logic [3:0] motor);
 always_comb
    case(select)
 		// 	A_BCD
-		0: motor = 4'b0_101;//5
-		1: motor = 4'b1_001;//9
-		2: motor = 4'b1_010;//10
-		3: motor = 4'b0_110;//6
-	
-		default: motor = 4'b0_000;//0
+		0: motor = 2'b10;
+		1: motor = 2'b00;
+		2: motor = 2'b01;
+		3: motor = 2'b11;
+		default: motor = 2'b00;
 	endcase 
 endmodule 

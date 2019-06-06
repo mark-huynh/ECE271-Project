@@ -1,8 +1,8 @@
-module counter #(parameter N=4)
+module Counter #(parameter N=4)
 					 (input logic clk,
 					  input logic reset_n,
 					  output logic[N-1:0] q );
-					  
+			  
 	always_ff@(posedge clk, posedge reset_n)
 		if(reset_n) q<=0;
 		else		   q<=q + 1;
