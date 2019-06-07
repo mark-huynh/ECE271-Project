@@ -21,25 +21,41 @@ refer to the applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 136 192 304 208)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clkor" (rect 5 0 29 12)(font "Arial" ))
-	(pt 168 8)
+	(rect 136 192 312 208)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "clkor" (rect 9 0 32 12)(font "Arial" ))
+	(pt 176 8)
 	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
 	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 656 376 832 392)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "testrev" (rect 9 0 44 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(output)
 	(rect 1048 360 1224 376)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "motor[3..0]" (rect 90 0 141 17)(font "Intel Clear" ))
+	(text "motor[3..0]" (rect 90 0 144 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -54,7 +70,7 @@ refer to the applicable agreement for further details.
 (symbol
 	(rect 872 336 1048 416)
 	(text "motordriver" (rect 5 0 61 12)(font "Arial" ))
-	(text "inst3" (rect 8 64 30 81)(font "Intel Clear" ))
+	(text "inst3" (rect 8 64 31 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -65,15 +81,15 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "orclk" (rect 0 0 23 12)(font "Arial" ))
-		(text "orclk" (rect 21 43 44 55)(font "Arial" ))
+		(text "rev" (rect 0 0 16 12)(font "Arial" ))
+		(text "rev" (rect 21 43 37 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
 		(pt 176 32)
 		(output)
 		(text "motorpin[3..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "motorpin[3..0]" (rect 98 27 166 39)(font "Arial" ))
+		(text "motorpin[3..0]" (rect 98 27 155 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing
@@ -102,12 +118,12 @@ refer to the applicable agreement for further details.
 		(pt 168 32)
 		(output)
 		(text "q[N-1..0]" (rect 0 0 43 12)(font "Arial" ))
-		(text "q[N-1..0]" (rect 111 27 154 39)(font "Arial" ))
+		(text "q[N-1..0]" (rect 111 27 147 39)(font "Arial" ))
 		(line (pt 168 32)(pt 152 32)(line_width 3))
 	)
 	(parameter
 		"N"
-		"18"
+		"20"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
@@ -118,7 +134,7 @@ refer to the applicable agreement for further details.
 (symbol
 	(rect 656 168 800 248)
 	(text "comparator" (rect 5 0 60 12)(font "Arial" ))
-	(text "inst2" (rect 8 64 30 81)(font "Intel Clear" ))
+	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -130,23 +146,23 @@ refer to the applicable agreement for further details.
 		(pt 144 32)
 		(output)
 		(text "gte" (rect 0 0 15 12)(font "Arial" ))
-		(text "gte" (rect 111 27 126 39)(font "Arial" ))
+		(text "gte" (rect 111 27 123 39)(font "Arial" ))
 		(line (pt 144 32)(pt 128 32))
 	)
 	(parameter
 		"N"
-		"18"
+		"20"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"M"
-		"10000"
+		"250000"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 128 64))
 	)
-	(annotation_block (parameter)(rect 800 104 975 161))
+	(annotation_block (parameter)(rect 800 104 982 161))
 )
 (connector
 	(pt 800 200)
@@ -166,22 +182,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 312 200)
-	(pt 312 384)
-)
-(connector
-	(pt 312 384)
-	(pt 872 384)
-)
-(connector
-	(pt 320 200)
-	(pt 312 200)
-)
-(connector
-	(pt 312 200)
-	(pt 304 200)
-)
-(connector
 	(pt 872 296)
 	(pt 872 368)
 )
@@ -193,5 +193,22 @@ refer to the applicable agreement for further details.
 	(pt 848 296)
 	(pt 872 296)
 )
-(junction (pt 312 200))
+(connector
+	(pt 304 200)
+	(pt 312 200)
+)
+(connector
+	(pt 312 200)
+	(pt 320 200)
+)
+(connector
+	(pt 824 384)
+	(pt 832 384)
+)
+(connector
+	(pt 832 384)
+	(pt 872 384)
+)
 (junction (pt 848 296))
+(junction (pt 312 200))
+(junction (pt 832 384))

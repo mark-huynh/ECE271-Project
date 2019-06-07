@@ -1,29 +1,26 @@
-module motordriver(input logic clkin,input logic orclk, output logic [3:0] motorpin);
+module motordriver(input logic clkin, input logic rev, output logic [3:0] motorpin);
 
 	logic resetnode;
 	logic resetsync;
 	logic [3:0] tomuxnode;
-	logic [1:0] todecnode;
+	logic [3:0] toinvert;
 	
 	Counter counting(
 	.clk(clkin),
-	.reset_n(resetsync),
+	.reset_n(resetnode),
 	.q(tomuxnode));
 	
-	motormux motor(
+	motordecode motor(
 	.select(tomuxnode),
-	.motor(todecnode));
+	.motor(toinvert));
 	
 	comparator comp(
 	.q(tomuxnode),
 	.gte(resetnode));
 	
-	sync instsy(
-	.clk(orclk),
-	.d(resetnode),
-	.q(resetsync));
+	eninvert invert(
+	.in(toinvert),
+	.out(motorpin),
+	.en(rev));
 	
-	wavedecoder instwave(
-	.q(todecnode),
-	.m(motorpin));
 endmodule 
