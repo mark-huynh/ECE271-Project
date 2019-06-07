@@ -2,7 +2,7 @@ module mux9 (input logic [3:0] s, output logic q);
 
 always_comb
    case(s)
-	0: q = 0;
+	0: q = 1;
 	1: q = 0;
 	2: q = 1;
 	3: q = 1;
@@ -10,7 +10,8 @@ always_comb
 	5: q = 1;
 	6: q = 0;
 	7: q = 0;
-	8: q = 1;
+	8: q = 0;
+	9: q = 1;
 	//DONE
 	
 
